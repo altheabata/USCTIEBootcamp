@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- navigation bar -->
+  <div class="navbar">
+     <div class="header">
+       <img src="https://i.ibb.co/jkJkhPh/Corona-Logo.png"  alt="Logo" style="width: 95px;height:95px;">
+     </div>
+     <div class="right-nav">
+       <div class="subnav">
+           <a href="index.html">Home</a>
+       </div>
+       <div class="subnav">
+           <a href="mustknowinfo.html">Must-Know Info</a>
+       </div>
+       <div class="subnav">
+         <a href="spreadbystate.html">Spread By State</a>
+       </div>
+       <div class="subnav">
+         <a href="polls.html">Test Your Knowledge</a>
+       </div>
+       <div class="subnav">
+         <a href="laws.html">Your Local Laws</a>
+       </div>
+	<div class="subnav">
+         <a href="rewards.html">Get Rewards</a>
+       </div>
+     </div>
+ </div>
+
+    <div class="rewardsbody">
+      <!-- info -->
+      <h3 class="rewardintro">Submit a Photo of You Following COVID-19 Regulations and Get Rewarded!</h3>
+      <p>Reach a certain amount of likes and you could get merch, account upgrades, or freebies and discounts from our sponsoring companies!</p>
+      <p>See below for the tier list, our sponsors, and the image submission.</p>
+      <!-- submit an image -->
+      <div class="uploadimage">
+        <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+        <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+        <p><img id="output" width="50%" /></p>
+        <p><i class="fas fa-heart"></i></p>
+         <!-- document.write(<i class="fas fa-heart"></i>); -->
+
+        <script>
+        var loadFile = function(event) {
+          var image = document.getElementById('output');
+          image.src = URL.createObjectURL(event.target.files[0]);
+        };
+        </script>
+      </div>
+
+    </div>
+
+  
+    <script src="script.js"></script>
+  </body>
+</html>
